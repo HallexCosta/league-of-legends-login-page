@@ -1,8 +1,9 @@
 export default class Utils {
   static generateRandomNumber(range: number) {
-    return Math.floor(Math.random() * range) 
+    const random = Math.floor(Math.random() * range)
+    return (random === 0 ? 1 : random)
   }
-  static dontRepeatImageIndex(currentNumber: number, amountImages: number): number {
+  static dontRepeatImageId(currentNumber: number, amountImages: number): number {
     let newNumber: number = Utils.generateRandomNumber(amountImages)
     while (currentNumber === newNumber) {
       newNumber = Utils.generateRandomNumber(amountImages)
