@@ -10,7 +10,6 @@
 }
 
 .container aside .riot-logo {
-
   margin-top: 60px;
 }
 
@@ -84,6 +83,8 @@
 
   margin-right: 6px;
   border-radius: 50px;
+
+  cursor: pointer;
 }
 
 .container aside button.sign-in {
@@ -102,7 +103,7 @@
 }
 
 .container aside > button:hover {
-  background-color: #D22A36;
+  background-color: var(--riot-red-color);
 }
 
 .container aside footer {
@@ -125,7 +126,16 @@
   opacity: .5;
 }
 
-.container aside > a {
+.container aside span > a:visited {
+  color: var(--semi-bold-gray);
+}
+.container aside span > a:hover {
+  color: var(--bold-gray);
+  opacity: .6;
+}
+
+
+.container aside > span {
   display: block;
   color: var(--semi-bold-gray);
   text-align: center;

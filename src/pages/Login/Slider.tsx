@@ -8,8 +8,8 @@ import Image5 from '@assets/sliders/5.png'
 import Image6 from '@assets/sliders/6.png'
 import Image7 from '@assets/sliders/7.png'
 
+import Utils from '@helpers/utils'
 import './styles/slider.css'
-import Utils from 'src/helpers/utils'
 
 interface SliderImage {
   id: number
@@ -20,6 +20,7 @@ interface SliderImage {
 
 export function Slider() {
   const CHANGE_IMAGE_SECONDS = 10
+  const IMAGES_AMOUNT = 7
   let currentImageIndex = 0
 
   const [images, setImages] = useState<SliderImage[]>([
@@ -69,13 +70,13 @@ export function Slider() {
 
 
   function slideshow(msChangeTime: number = 1) {
-    const random = Utils.dontRepeatImageIndex(currentImageIndex, 7)
+    const random = Utils.dontRepeatImageIndex(currentImageIndex, IMAGES_AMOUNT)
     currentImageIndex = random
 
     setImages(images.map(image => {
       image.selected = false
 
-      if (image.id == random) image.selected = true
+      if (image.id == currentImageIndex) image.selected = true
 
       return image
     }))

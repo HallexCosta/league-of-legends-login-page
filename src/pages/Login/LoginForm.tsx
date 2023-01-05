@@ -1,10 +1,10 @@
 import { ArrowRight } from 'react-feather'
-import RiotGamesIcon from '@assets/riot-games-icon.svg'
+import RiotGamesIcon from '@assets/icons/riot-games-icon.svg'
 
-import FacebookLogo from '@assets/fb-icon.svg'
-import GoogleLogo from '@assets/google-icon.svg'
-import AppleLogo from '@assets/apple-icon.svg'
-import XboxLogo from '@assets/xbox-icon.svg'
+import FacebookLogo from '@assets/icons/fb-icon.svg'
+import GoogleLogo from '@assets/icons/google-icon.svg'
+import AppleLogo from '@assets/icons/apple-icon.svg'
+import XboxLogo from '@assets/icons/xbox-icon.svg'
 
 import './styles/login-form.css'
 
@@ -47,7 +47,9 @@ export function LoginForm() {
         <a href="https://signup.br.leagueoflegends.com/pt">CRIAR CONTA</a>
       </footer>
 
-      <a href="https://github.com/hallexcosta">Developed by Hállex</a>
+      <span>
+        Developed by <a href="https://github.com/hallexcosta">Hállex</a>
+      </span>
     </aside>
   )
 }
