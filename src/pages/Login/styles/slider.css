@@ -1,0 +1,22 @@
+.container section {
+  width: 60%;
+  height: 100%;
+}
+
+.container section > img {
+  width: 0;
+  height: 0;
+
+  object-fit: cover;
+
+  transition: opacity 1000ms;
+  opacity: 0;
+}
+
+.container section img.selected {
+  width: 100%;
+  height: auto;
+
+  opacity: 1;
+}
+

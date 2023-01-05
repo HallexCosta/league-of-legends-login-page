@@ -1,0 +1,37 @@
+:root {
+  --login-container-width: 20vw;
+
+  --light-gray: #EEE;
+  --semi-bold-gray: #B9B2B2;
+  --bold-gray: #333333;
+  
+  --slider-container-width: cal(100vw - var(--login-container-width));
+  --facebook-button-color: 22, 119, 242;
+  --google-button-color: 255, 255 ,255;
+  --apple-button-color: 19, 19, 19;
+  --xbox-button-color: 16, 76, 16;
+}
+
+*, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  box-sizing: border-box;
+  outline: none;
+
+  overflow: hidden;
+
+  font-family: Inter;
+}
+
+button {
+  background: white;
+}
+
+.container {
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+}
