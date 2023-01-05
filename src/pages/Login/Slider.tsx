@@ -21,7 +21,7 @@ interface SliderImage {
 export function Slider() {
   const CHANGE_IMAGE_SECONDS = 10
   const IMAGES_AMOUNT = 7
-  let currentImageIndex = 0
+  let currentImageId = 1
 
   const [images, setImages] = useState<SliderImage[]>([
     {
@@ -69,23 +69,24 @@ export function Slider() {
   ])
 
 
-  function slideshow(msChangeTime: number = 1) {
-    const random = Utils.dontRepeatImageIndex(currentImageIndex, IMAGES_AMOUNT)
-    currentImageIndex = random
+  function slideshow() {
+    const random = Utils.dontRepeatImageId(currentImageId, IMAGES_AMOUNT)
+    currentImageId = random
+    console.log('random', random)
 
     setImages(images.map(image => {
       image.selected = false
 
-      if (image.id == currentImageIndex) image.selected = true
+      if (image.id == currentImageId) image.selected = true
 
       return image
     }))
 
-    setTimeout(slideshow.bind(null, msChangeTime), msChangeTime * 1000)
+    setTimeout(slideshow.bind(null, CHANGE_IMAGE_SECONDS), CHANGE_IMAGE_SECONDS * 1000)
   }
 
   useEffect(() => {
-    slideshow(CHANGE_IMAGE_SECONDS)
+    slideshow()
   }, [])
 
   return (
