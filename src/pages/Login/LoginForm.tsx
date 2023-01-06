@@ -72,7 +72,7 @@ export function LoginForm() {
           <a href="https://signup.br.leagueoflegends.com/pt">CRIAR CONTA</a>
         </span>
 
-        <span class="developed">
+        <span className="developed">
           Developed by <a href="https://github.com/hallexcosta">Hállex</a>
         </span>
       </footer>
