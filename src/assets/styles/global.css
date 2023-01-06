@@ -4,7 +4,8 @@
   --light-gray: #EEE;
   --semi-bold-gray: #B9B2B2;
   --bold-gray: #333333;
-  
+  --riot-red-color: #D22A36; 
+
   --slider-container-width: cal(100vw - var(--login-container-width));
   --facebook-button-color: 22, 119, 242;
   --google-button-color: 255, 255 ,255;

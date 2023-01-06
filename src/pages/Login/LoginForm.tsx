@@ -1,22 +1,42 @@
+import { ChangeEvent,  useState } from 'react'
 import { ArrowRight } from 'react-feather'
-import RiotGamesIcon from '@assets/riot-games-icon.svg'
+import RiotGamesIcon from '@assets/icons/riot-games-icon.svg'
 
-import FacebookLogo from '@assets/fb-icon.svg'
-import GoogleLogo from '@assets/google-icon.svg'
-import AppleLogo from '@assets/apple-icon.svg'
-import XboxLogo from '@assets/xbox-icon.svg'
+import FacebookLogo from '@assets/icons/fb-icon.svg'
+import GoogleLogo from '@assets/icons/google-icon.svg'
+import AppleLogo from '@assets/icons/apple-icon.svg'
+import XboxLogo from '@assets/icons/xbox-icon.svg'
 
 import './styles/login-form.css'
 
 export function LoginForm() {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const filledInputs: boolean = username.length > 0 && password.length > 0
+
+  function handleChangeUsername(e: ChangeEvent<HTMLInputElement>) {
+    setUsername(e.target.value)
+  }
+  function handleChangePassword(e: ChangeEvent<HTMLInputElement>) {
+    setPassword(e.target.value)
+  }
+
   return (
     <aside>
       <img className="riot-logo" src={RiotGamesIcon} />
 
       <h2>Fazer login</h2>
 
-      <input placeholder="Nome de usuário" />
-      <input placeholder="Sua senha" />
+      <div className="inputs">
+        <label>
+          <input onChange={handleChangeUsername} />
+          <span className={username.length > 0 ? 'move-top' : ''}>Nome de usuário</span>
+        </label>
+        <label>
+          <input onChange={handleChangePassword} type="password" />
+          <span className={password.length > 0 ? 'move-top' : ''}>Sua senha</span>
+        </label>
+      </div>
 
       <div className="login-options">
         <a href="https://facebook.com" className="facebook" target="__blank" referrerPolicy="no-referrer">
@@ -35,10 +55,14 @@ export function LoginForm() {
 
       <label className="remember-signin">
         <input type="checkbox" placeholder="Sua senha" />
-        Manter login
+        <span>Manter login</span>
       </label>
 
-      <button className="sign-in" onClick={() => alert('Wrong login credentials!')}>
+      <button 
+        className={`sign-in ${filledInputs ? 'active': ''}`} 
+        onClick={() => alert('Wrong login credentials!')}
+        disabled={!filledInputs}
+      >
         <ArrowRight color="#E0E0E0" />
       </button>
 
@@ -47,7 +71,9 @@ export function LoginForm() {
         <a href="https://signup.br.leagueoflegends.com/pt">CRIAR CONTA</a>
       </footer>
 
-      <a href="https://github.com/hallexcosta">Developed by Hállex</a>
+      <span>
+        Developed by <a href="https://github.com/hallexcosta">Hállex</a>
+      </span>
     </aside>
   )
 }
