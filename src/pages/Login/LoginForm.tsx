@@ -67,13 +67,15 @@ export function LoginForm() {
       </button>
 
       <footer>
-        NÃO CONSEGUE INICIAR SESSÃO?
-        <a href="https://signup.br.leagueoflegends.com/pt">CRIAR CONTA</a>
-      </footer>
+        <span className="help-signup">
+          NÃO CONSEGUE INICIAR SESSÃO?
+          <a href="https://signup.br.leagueoflegends.com/pt">CRIAR CONTA</a>
+        </span>
 
-      <span>
-        Developed by <a href="https://github.com/hallexcosta">Hállex</a>
-      </span>
+        <span class="developed">
+          Developed by <a href="https://github.com/hallexcosta">Hállex</a>
+        </span>
+      </footer>
     </aside>
   )
 }

@@ -54,6 +54,14 @@
   left: 4%;
 
   transition: all 200ms;
+
+  /* no select span */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 .container aside .inputs label input:focus + span,
@@ -68,7 +76,8 @@
 .container aside .login-options {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+
+  gap: 0 20px;
 }
 
 .container aside .login-options .icon {
@@ -79,10 +88,11 @@
   display: flex;
   flex-direction: column;
 
-  padding: 8px 28px;
+  padding: 8px 20px;
   border-radius: 6px;
 
   cursor: pointer;
+  width: 100%;
 }
 
 .container aside .login-options .facebook{
@@ -147,40 +157,100 @@
 }
 
 .container aside footer {
-  width: 100%;
-  color: var(--semi-bold-gray);
-  font-size: 12px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 50px 0;
+
+
+  width: 100%;
+
+  color: var(--semi-bold-gray);
+  font-size: 12px;
   
   font-weight: 800;
   line-height: 15px;
 }
 
-.container aside footer a {
+.container aside footer span {
+  width: 100%;
+}
+.container aside footer span a {
   color: var(--semi-bold-gray);
 }
-.container aside footer a:hover {
+.container aside footer span a:hover {
   color: var(--bold-gray);
   opacity: .5;
 }
 
-.container aside span > a:visited {
+.container aside footer span > a:visited {
   color: var(--semi-bold-gray);
 }
-.container aside span > a:hover {
+.container aside footer span > a:hover {
   color: var(--bold-gray);
   opacity: .6;
 }
 
+.container aside footer > span.help-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.container aside > span {
+.container aside footer > span.developed {
   display: block;
   color: var(--semi-bold-gray);
   text-align: center;
   opacity: .5;
-
-  margin-top: 40px;
 }
 
+@media(max-width: 1280px) {
+  .container aside .login-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  .container aside footer {
+    height: 90px;
+  }
+}
+
+@media(max-width: 940px) {
+  .container section {
+    display: none;
+  }
+  .container aside {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .container aside .login-options {
+    display: flex;
+    flex-direction: row;
+    gap: 0 20px;
+  }
+  .container aside .login-options a {
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px) {
+  .container aside {
+    width: 100%;
+  }
+  .container aside .login-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  .container section {
+    display: none;
+  }
+}
+
+@media(max-width: 480px) {
+  .container aside .login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+  }
+}
