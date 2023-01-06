@@ -37,7 +37,7 @@ button {
   height: 100vh;
 }
 
-@media(max-width: 940px) {
+@media(max-width: 990px) {
   *, body {
     overflow: auto;
   }
