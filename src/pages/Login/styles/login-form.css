@@ -199,6 +199,9 @@
   width: 100%;
   height: 300px;
 }
+.container aside footer > div.help-signup > a {
+  color: var(--semi-bold-gray);
+}
 .container aside footer > div.help-signup > a:visited {
   color: var(--semi-bold-gray);
 }
@@ -259,6 +262,9 @@
 }
 
 @media(max-width: 480px) {
+  .container aside {
+    padding: 15px;
+  }
   .container aside .login-options {
     display: flex;
     flex-direction: column;
