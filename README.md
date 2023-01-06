@@ -1,7 +1,7 @@
 # League of Legends
 
 This is a clone from League of Legends - Login Client.  
-You can access the project click to [here](https://capable-starlight-c1096d.netlify.app/)
+You can access the project click to [here](https://league-of-legends-client-login.netlify.app/)
 
 ### Extra large screen
 ![](./docs/images/xl.png)
