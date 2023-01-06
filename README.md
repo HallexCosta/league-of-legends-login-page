@@ -12,4 +12,7 @@ You can access the project click to [here](https://capable-starlight-c1096d.netl
 ### Small screen
 ![](./docs/images/sm.png)
 
+### Extra small screen
+![](./docs/images/xs.png)
+
 Inspired by [Riot Games Client](https://www.riotgames.com/en)
