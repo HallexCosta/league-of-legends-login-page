@@ -50,8 +50,8 @@
   font-weight: 900;
 
   position: absolute;
-  top: 25%;
-  left: 4%;
+  top: 20px;
+  left: 15px;
 
   transition: all 200ms;
 
@@ -66,7 +66,7 @@
 
 .container aside .inputs label input:focus + span,
 .container aside .inputs label > .move-top {
-  top: 8%; 
+  top: 6px; 
   font-size: 12px;
   line-height: 10px;
 
@@ -173,6 +173,7 @@
 
 .container aside footer span {
   width: 100%;
+  height: 100%;
 }
 .container aside footer span a {
   color: var(--semi-bold-gray);
@@ -190,10 +191,20 @@
   opacity: .6;
 }
 
-.container aside footer > span.help-signup {
+.container aside footer > div.help-signup {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 100%;
+  height: 300px;
+}
+.container aside footer > div.help-signup > a:visited {
+  color: var(--semi-bold-gray);
+}
+.container aside footer > div.help-signup > a:hover {
+  color: var(--bold-gray);
+  opacity: .6;
 }
 
 .container aside footer > span.developed {
@@ -252,5 +263,14 @@
     display: flex;
     flex-direction: column;
     gap: 10px 0;
+  }
+  .container aside .inputs label > span {
+    left: 14px;
+    font-size: 12px;
+  }
+}
+@media(max-width: 380px) {
+  .container aside footer > div.help-signup {
+    font-size: 8px;
   }
 }
