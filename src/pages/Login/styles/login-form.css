@@ -2,6 +2,8 @@
   display: block;
   padding: 0 96px;
   width: 40%;
+  margin-top: 20px;
+  background: var(--bg-color);
 }
 
 .container aside img {
@@ -10,7 +12,7 @@
 }
 
 .container aside .riot-logo {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .container aside h2 {
@@ -217,6 +219,10 @@
 }
 
 @media(max-width: 1280px) {
+  .container aside {
+    padding: 0 50px;
+  }
+
   .container aside .login-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -236,7 +242,6 @@
 
   .container aside {
     width: 100%;
-    margin: 0 auto;
   }
   .container aside .login-options {
     display: flex;

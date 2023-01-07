@@ -11,6 +11,14 @@
   --google-button-color: 255, 255 ,255;
   --apple-button-color: 19, 19, 19;
   --xbox-button-color: 16, 76, 16;
+
+  --bg-color: #fff;
+  --text-color: black;
+}
+
+body:has(.container.dark-theme) {
+  --bg-color: #121214
+  --text-color: white;
 }
 
 *, body {

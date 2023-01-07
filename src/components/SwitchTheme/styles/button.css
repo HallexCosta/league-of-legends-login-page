@@ -1,0 +1,39 @@
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  background-color: #eee;
+  border: 1px solid #E5E5E5;
+
+  width: 80px;
+  height: 30px;
+  padding: 20px 10px;
+
+  border-radius: 50px;
+}
+
+.button-container svg {
+  width: 20px;
+  height: 20px;
+
+  stroke: #BEBEBE;
+}
+
+.button-container svg:nth-child(2) {
+  display: none;
+}
+
+.dark-theme.button-container {
+  background-color: black;
+}
+
+.dark-theme .button-container svg:nth-child(1) {
+  display: none;
+  stroke: black;
+}
+.dark-theme .button-container svg:nth-child(2) {
+  display: block;
+}
