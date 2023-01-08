@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+:has(.container.dark-theme) aside h2 {
+  color: #f1f1f1;
+}
+
 .container aside .inputs label {
   display: block;
   position: relative;
@@ -33,6 +37,7 @@
   padding-top: 10px;
 
   border: 1px solid #BDBDBD;
+  border-radius: 8px;
   margin-bottom: 15px;
 
   background: #EDEDED;
@@ -42,6 +47,10 @@
   font-size: 18px;
 
   opacity: 1;
+}
+.container aside .inputs label > input:focus {
+  background: #fff;
+  border: 2px solid #000;
 }
 
 .container aside .inputs label > span {
@@ -122,6 +131,9 @@
   color: var(--bold-gray);
   margin: 20px 0 40px 0;
 }
+:has(.container.dark-theme) aside label.remember-signin span {
+  color: #f1f1f1;
+}
 
 .container aside .remember-signin > input {
   width: 20px;
@@ -145,6 +157,11 @@
   margin: 0 auto;
   margin-bottom: 32px;
 
+  background: var(--bg-color)
+}
+
+:has(.container.dark-theme) aside button.sign-in > svg {
+  stroke: #BDBDBD;
 }
 
 .container aside button.sign-in.active {
@@ -242,6 +259,7 @@
 
   .container aside {
     width: 100%;
+    margin-top: 20px 0;
   }
   .container aside .login-options {
     display: flex;
@@ -269,7 +287,7 @@
 
 @media(max-width: 480px) {
   .container aside {
-    padding: 15px;
+    padding: 0 18px;
   }
   .container aside .login-options {
     display: flex;

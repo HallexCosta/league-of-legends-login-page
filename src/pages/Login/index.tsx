@@ -1,33 +1,37 @@
-import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
+import { forwardRef, useCallback, useEffect, useReducer, useRef } from "react";
 import { LoginForm } from "./LoginForm";
 import { Slider } from "./Slider";
 
-export const LoginPage = forwardRef((props, _ref) => {
+interface LoginPageReducerProps {
+  theme: string
+}
+
+export const LoginPage = forwardRef((_, _ref) => {
   const buttonSwitchThemeRef = useRef<HTMLDivElement>({} as HTMLDivElement)
 
-  const [theme, setTheme] = useState<string>('')
+  const [state, dispatch] = useReducer((
+    state: LoginPageReducerProps,
+    action: LoginPageReducerProps
+  ) => {
+    const newState = {...state}
+    Object.assign(newState, action)
+    return newState
+  }, { theme: ''})
 
-  useImperativeHandle(_ref, () => {
-    return {
-      getTheme() {
-        const classes = [...buttonSwitchThemeRef.current.classList]
-        console.log(classes)
+  const handleSwitchTheme = useCallback(() => {
+    dispatch({
+      theme: !state.theme.includes('dark-theme') ?'dark-theme' : ''
+    })
+  }, [state.theme])
 
-        setTheme(classes.find((item) => item === 'dark-theme') || '')
-
-        return 
-      }
-    }
-  })
   useEffect(() => {
-    if (buttonSwitchThemeRef.current) {
-      console.log('principal', theme)
-    }
-  }, [theme])
+    buttonSwitchThemeRef.current?.addEventListener('click', handleSwitchTheme)
+    return () => buttonSwitchThemeRef?.current.removeEventListener('click', handleSwitchTheme)
+  }, [state.theme])
 
   return (
     <div
-      className={`container ${theme}`}
+      className={`container ${state.theme}`}
     >
       <LoginForm ref={buttonSwitchThemeRef} />
       <Slider />
