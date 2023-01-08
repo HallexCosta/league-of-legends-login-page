@@ -9,7 +9,7 @@
   --slider-container-width: cal(100vw - var(--login-container-width));
   --facebook-button-color: 22, 119, 242;
   --google-button-color: 255, 255 ,255;
-  --apple-button-color: 19, 19, 19;
+  --apple-button-color: 26, 26, 26;
   --xbox-button-color: 16, 76, 16;
 
   --bg-color: #fff;
@@ -58,6 +58,10 @@ span,
   -moz-user-select: none;
   -ms-user-select: none; 
   user-select: none;
+}
+
+span {
+  overflow: hidden;
 }
 
 @media(max-width: 990px) {

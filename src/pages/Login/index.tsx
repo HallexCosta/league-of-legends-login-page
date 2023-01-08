@@ -15,16 +15,23 @@ export const LoginPage = forwardRef((_, _ref) => {
     state: LoginPageReducerProps,
     action: LoginPageReducerProps
   ) => {
-    const newState = {...state}
-    Object.assign(newState, action)
-    return newState
-  }, { theme: ''})
+    localStorage.setItem('theme', action.theme)
+    return { theme: action.theme }
+  }, {
+    theme: ''
+  })
 
   const handleSwitchTheme = useCallback(() => {
     dispatch({
       theme: !state.theme.includes('dark-theme') ?'dark-theme' : ''
     })
   }, [state.theme])
+
+  useEffect(() => {
+    dispatch({
+      theme: localStorage.getItem('theme') ?? ''
+    })
+  }, [])
 
   useEffect(() => {
     buttonSwitchThemeRef.current?.addEventListener('click', handleSwitchTheme)

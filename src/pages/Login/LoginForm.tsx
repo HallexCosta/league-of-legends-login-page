@@ -1,7 +1,7 @@
-import { ChangeEvent,  forwardRef,  useRef,  useState } from 'react'
+import { ChangeEvent,  forwardRef, useState } from 'react'
 import { ArrowRight } from 'react-feather'
-import RiotGamesIcon from '@assets/icons/riot-games-icon.svg'
 
+import RiotGamesLogo from '@assets/icons/riot-games-icon.svg'
 import FacebookLogo from '@assets/icons/fb-icon.svg'
 import GoogleLogo from '@assets/icons/google-icon.svg'
 import AppleLogo from '@assets/icons/apple-icon.svg'
@@ -25,11 +25,11 @@ export const LoginForm = forwardRef<HTMLDivElement>((_, _ref) => {
 
   return (
     <aside ref={_ref}>
-      <img className="riot-logo no-select" src={RiotGamesIcon} />
+      <img className="riot-logo" src={RiotGamesLogo} />
 
       <h2>Fazer login</h2>
 
-      <div className="inputs">
+      <form className="inputs">
         <label>
           <input onChange={handleChangeUsername} />
           <span className={username.length > 0 ? 'move-top' : ''}>Nome de usuário</span>
@@ -38,7 +38,7 @@ export const LoginForm = forwardRef<HTMLDivElement>((_, _ref) => {
           <input onChange={handleChangePassword} type="password" />
           <span className={password.length > 0 ? 'move-top' : ''}>Sua senha</span>
         </label>
-      </div>
+      </form>
 
       <div className="login-options">
         <a href="https://facebook.com" className="facebook" target="__blank" referrerPolicy="no-referrer">

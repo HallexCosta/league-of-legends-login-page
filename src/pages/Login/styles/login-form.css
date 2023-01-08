@@ -107,7 +107,7 @@
   border: 1px solid rgba(var(--apple-button-color), .2);
 }
 .container aside .login-options .apple {
-  background: rgba(var(--apple-button-color));
+  background: rgba(var(--apple-button-color), .9);
   border: rgba(var(--apple-button-color), .2);
 }
 .container aside .login-options .xbox {

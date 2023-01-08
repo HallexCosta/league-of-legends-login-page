@@ -7,12 +7,10 @@ export const Button = forwardRef<HTMLDivElement>((_, _ref) => {
     const [theme, setTheme] = useState('');
 
     function handleSwitchTheme() {
-      setTheme(!theme.includes('dark-theme') ?'dark-theme' : '')
+      setTheme(localStorage.getItem('theme') ?? '')
     }
-
-    useEffect(() => {
-      console.log('theme foi alterado para', theme === '' ? 'light' : theme)
-    }, [theme])
+      
+    useEffect(() => setTheme(localStorage.getItem('theme') ?? ''))
 
     return (
       <div 
