@@ -5,7 +5,7 @@ export default class Utils {
   }
   static dontRepeatImageId(currentNumber: number, amountImages: number): number {
     let newNumber: number = Utils.generateRandomNumber(amountImages)
-    while (currentNumber === newNumber) {
+    while (currentNumber === newNumber && newNumber > 0) {
       newNumber = Utils.generateRandomNumber(amountImages)
     }
     return newNumber
