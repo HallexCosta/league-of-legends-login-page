@@ -16,8 +16,8 @@
   --text-color: black;
 }
 
-body:has(.container.dark-theme) {
-  --bg-color: #121214
+:has(.container.dark-theme) {
+  --bg-color: #121214;
   --text-color: white;
 }
 
@@ -43,6 +43,8 @@ button {
 
   width: 100vw;
   height: 100vh;
+
+  background-color: var(--bg-color);
 }
 
 @media(max-width: 990px) {
