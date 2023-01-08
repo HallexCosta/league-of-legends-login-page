@@ -7,15 +7,11 @@ export const Button = forwardRef<HTMLDivElement>((_, _ref) => {
     const [theme, setTheme] = useState('');
 
     function handleSwitchTheme() {
-      if (theme.includes('dark-theme')) {
-        setTheme('')
-      } else {
-        setTheme('dark-theme') 
-      }
+      setTheme(!theme.includes('dark-theme') ?'dark-theme' : '')
     }
 
     useEffect(() => {
-      console.log('theme foi alterado')
+      console.log('theme foi alterado para', theme === '' ? 'light' : theme)
     }, [theme])
 
     return (
@@ -24,9 +20,9 @@ export const Button = forwardRef<HTMLDivElement>((_, _ref) => {
         className={`button-container ${theme}`}
         onClick={handleSwitchTheme}
       >
-        <Sun />      
+        <Sun className="sun" />      
 
-        <Moon />      
+        <Moon className="moon" />      
       </div>
     )
   }

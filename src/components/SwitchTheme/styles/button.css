@@ -1,12 +1,32 @@
+:root {
+  --btn-switch-bg: #EEEEEE;
+  --btn-switch-border: #E5E5E5;
+  --btn-switch-icon-color: #BEBEBE;
+
+  --show-sun-icon: block;
+  --show-moon-icon: none;
+}
+
+:has(.container.dark-theme) {
+  --btn-switch-bg: #191919;
+  --btn-switch-border: #111111;
+  --btn-switch-icon-color: #363636;
+
+  --show-sun-icon: none;
+  --show-moon-icon: block;
+}
+
 .button-container {
+  position: absolute;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   overflow: hidden;
 
-  background-color: #eee;
-  border: 1px solid #E5E5E5;
+  background-color: var(--btn-switch-bg);
+  border: 1px solid var(--btn-switch-border);
 
   width: 80px;
   height: 30px;
@@ -16,24 +36,24 @@
 }
 
 .button-container svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 
-  stroke: #BEBEBE;
+  stroke: var(--btn-switch-icon-color);
 }
 
-.button-container svg:nth-child(2) {
-  display: none;
+.button-container svg.sun {
+  display: var(--show-sun-icon);
 }
 
-.dark-theme.button-container {
-  background-color: black;
+.button-container svg.moon {
+  display: var(--show-moon-icon);
+
+  margin-left: 35px;
 }
 
-.dark-theme .button-container svg:nth-child(1) {
-  display: none;
-  stroke: black;
-}
-.dark-theme .button-container svg:nth-child(2) {
-  display: block;
+@media(max-width: 990px){
+  .button-container {
+    position: relative;
+  }
 }
