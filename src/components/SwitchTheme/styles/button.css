@@ -18,6 +18,8 @@
 
 .button-container {
   position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
 
   display: flex;
   align-items: center;
@@ -33,6 +35,7 @@
   padding: 20px 10px;
 
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .button-container svg {
@@ -54,6 +57,6 @@
 
 @media(max-width: 990px){
   .button-container {
-    position: relative;
+    position: absolute;
   }
 }

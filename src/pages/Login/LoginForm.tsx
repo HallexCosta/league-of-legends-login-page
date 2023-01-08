@@ -7,8 +7,6 @@ import GoogleLogo from '@assets/icons/google-icon.svg'
 import AppleLogo from '@assets/icons/apple-icon.svg'
 import XboxLogo from '@assets/icons/xbox-icon.svg'
 
-import { SwitchTheme } from '@components/SwitchTheme'
-
 import './styles/login-form.css'
 
 
@@ -26,9 +24,7 @@ export const LoginForm = forwardRef<HTMLDivElement>((_, _ref) => {
   }
 
   return (
-    <aside>
-      <SwitchTheme ref={_ref} />
-
+    <aside ref={_ref}>
       <img className="riot-logo" src={RiotGamesIcon} />
 
       <h2>Fazer login</h2>

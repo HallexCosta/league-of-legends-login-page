@@ -2,6 +2,8 @@ import { forwardRef, useCallback, useEffect, useReducer, useRef } from "react";
 import { LoginForm } from "./LoginForm";
 import { Slider } from "./Slider";
 
+import { SwitchTheme } from "@components/SwitchTheme";
+
 interface LoginPageReducerProps {
   theme: string
 }
@@ -33,7 +35,9 @@ export const LoginPage = forwardRef((_, _ref) => {
     <div
       className={`container ${state.theme}`}
     >
-      <LoginForm ref={buttonSwitchThemeRef} />
+      <SwitchTheme ref={buttonSwitchThemeRef} />
+
+      <LoginForm />
       <Slider />
     </div>
   )

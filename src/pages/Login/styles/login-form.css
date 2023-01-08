@@ -1,6 +1,6 @@
 .container aside {
   display: block;
-  padding: 0 96px;
+  padding: 0 60px;
   width: 40%;
   margin-top: 20px;
   background: var(--bg-color);
@@ -259,7 +259,13 @@
 
   .container aside {
     width: 100%;
-    margin-top: 20px 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0 100px;
+  }
+
+  .container aside img.riot-logo {
+    margin-top: 40px;
   }
   .container aside .login-options {
     display: flex;
@@ -272,9 +278,6 @@
 }
 
 @media(max-width: 600px) {
-  .container aside {
-    width: 100%;
-  }
   .container aside .login-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -288,6 +291,8 @@
 @media(max-width: 480px) {
   .container aside {
     padding: 0 18px;
+
+    margin-top: 40px;
   }
   .container aside .login-options {
     display: flex;
