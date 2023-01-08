@@ -47,6 +47,19 @@ button {
   background-color: var(--bg-color);
 }
 
+img,
+h2,
+span,
+.no-select {
+  /* no select text or content */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
+
 @media(max-width: 990px) {
   *, body {
     overflow: auto;

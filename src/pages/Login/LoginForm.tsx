@@ -25,7 +25,7 @@ export const LoginForm = forwardRef<HTMLDivElement>((_, _ref) => {
 
   return (
     <aside ref={_ref}>
-      <img className="riot-logo" src={RiotGamesIcon} />
+      <img className="riot-logo no-select" src={RiotGamesIcon} />
 
       <h2>Fazer login</h2>
 
