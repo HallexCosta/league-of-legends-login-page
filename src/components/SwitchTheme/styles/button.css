@@ -1,0 +1,62 @@
+:root {
+  --btn-switch-bg: #EEEEEE;
+  --btn-switch-border: #E5E5E5;
+  --btn-switch-icon-color: #BEBEBE;
+
+  --show-sun-icon: block;
+  --show-moon-icon: none;
+}
+
+:has(.container.dark-theme) {
+  --btn-switch-bg: #191919;
+  --btn-switch-border: #111111;
+  --btn-switch-icon-color: #363636;
+
+  --show-sun-icon: none;
+  --show-moon-icon: block;
+}
+
+.button-container {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  background-color: var(--btn-switch-bg);
+  border: 1px solid var(--btn-switch-border);
+
+  width: 80px;
+  height: 30px;
+  padding: 20px 10px;
+
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.button-container svg {
+  width: 24px;
+  height: 24px;
+
+  stroke: var(--btn-switch-icon-color);
+}
+
+.button-container svg.sun {
+  display: var(--show-sun-icon);
+}
+
+.button-container svg.moon {
+  display: var(--show-moon-icon);
+
+  margin-left: 35px;
+}
+
+@media(max-width: 990px){
+  .button-container {
+    position: absolute;
+  }
+}
