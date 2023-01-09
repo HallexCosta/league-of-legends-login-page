@@ -1,4 +1,4 @@
-import { ChangeEvent,  forwardRef, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { ArrowRight } from 'react-feather'
 
 import RiotGamesLogo from '@assets/icons/riot-games-icon.svg'
@@ -9,8 +9,7 @@ import XboxLogo from '@assets/icons/xbox-icon.svg'
 
 import './styles/login-form.css'
 
-
-export const LoginForm = forwardRef<HTMLDivElement>((_, _ref) => {
+export const Form = (() => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
@@ -24,7 +23,7 @@ export const LoginForm = forwardRef<HTMLDivElement>((_, _ref) => {
   }
 
   return (
-    <aside ref={_ref}>
+    <aside>
       <img className="riot-logo" src={RiotGamesLogo} />
 
       <h2>Fazer login</h2>

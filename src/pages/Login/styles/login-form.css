@@ -286,6 +286,12 @@
 
     margin-top: 40px;
   }
+
+  .container aside,
+  .container aside img.riot-logo {
+    margin-top: 0px;
+  }
+
   .container aside .login-options {
     display: flex;
     flex-direction: column;
