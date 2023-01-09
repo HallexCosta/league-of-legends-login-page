@@ -7,7 +7,7 @@ import GoogleLogo from '@assets/icons/google-icon.svg'
 import AppleLogo from '@assets/icons/apple-icon.svg'
 import XboxLogo from '@assets/icons/xbox-icon.svg'
 
-import './styles/login-form.css'
+import './styles/form.css'
 
 export const Form = (() => {
   const [username, setUsername] = useState('')

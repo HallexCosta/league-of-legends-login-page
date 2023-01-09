@@ -1,5 +1,4 @@
 .container aside {
-  display: block;
   padding: 0 60px;
   width: 40%;
   margin-top: 20px;
@@ -289,7 +288,7 @@
 
   .container aside,
   .container aside img.riot-logo {
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
   .container aside .login-options {
