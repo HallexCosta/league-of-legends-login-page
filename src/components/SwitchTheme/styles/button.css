@@ -16,7 +16,7 @@
   --show-moon-icon: block;
 }
 
-.button-container {
+.container .button-container {
   position: absolute;
   margin-top: 20px;
   margin-left: 20px;
@@ -38,25 +38,25 @@
   cursor: pointer;
 }
 
-.button-container svg {
+.container .button-container svg {
   width: 24px;
   height: 24px;
 
   stroke: var(--btn-switch-icon-color);
 }
 
-.button-container svg.sun {
+.container .button-container svg.sun {
   display: var(--show-sun-icon);
 }
 
-.button-container svg.moon {
+.container .button-container svg.moon {
   display: var(--show-moon-icon);
 
   margin-left: 35px;
 }
 
-@media(max-width: 990px){
-  .button-container {
-    position: absolute;
+@media(max-width: 480px){
+  .container .button-container {
+    position: relative;
   }
 }
